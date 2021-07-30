@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+.heart-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 10px 100px #f70000;
+}
+.content{
+  padding: 13px 18px;
+  display: flex;
+  border: 2px solid #f78686;
+  border-radius: 5px;
+  background: #f7f1f1;
+  cursor: pointer;
+}
+.content.heart-active{
+  border-color: #fc0000;
+  background: #fd9d9d;
+}
+.heart{
+  position: absolute;
+  background: url("img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 52%;
+  left: 11%;
+  transform: translate(-50%,-50%);
+}
+.text:before{
+  content: 'Phạm Trúc Ly Ới';
+  font-size: 21px;
+  margin-left: 30px;
+  color: grey;
+  font-family: 'Montserrat',sans-serif;
+}
+.numb:before{
+  font-size: 21px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #9C9496;
+  font-family: sans-serif;
+}
+.numb.heart-active:before{
+  content: '2082006';
+  color: #000;
+}
+.text.heart-active::before{
+  color: rgb(0, 0, 0);
+  content: 'Cúc iu Úc';
+}
+.heart.heart-active{
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+body{
+  background-color: #fde7f6;
+}
+@keyframes animate {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
